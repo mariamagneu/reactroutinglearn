@@ -1,12 +1,10 @@
 // src/pages/ProjectsPage.jsx
 
-import projectsData from "./../projects-data.json";
-
-function ProjectsPage() {
+function ProjectsPage(props) {
   return (
     <div>
       <h2>Projects</h2>
-      {projectsData.map((project) => {
+      {props.projects.map((project) => {
         return (
           <div key={project.id} className="project">
             <h3>{project.name}</h3>
